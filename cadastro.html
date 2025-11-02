@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuario de Voluntarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <! -- header -- >
+    <header>
+        <nav>
+            <div class="logo">&#128153; Voluntarios</div>
+            <button class="menu-toggle" onclick="ToggleMenu()"></button>
+            <ul id="navMenu">
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="Projetto.html">projeto</a></li>
+                <li><a href="cadastro.html"class="active">cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero - hero-cadastro">
+            <div class="hero-content">
+                <h1>Junte-se a nós como Voluntario!</h1>
+                <p>Preencha o formulario abaixo para se cadastrar como voluntario em nossa ONG.</p>
+            </div>
+    </section>
+
+    <-- Formulario de cadastro -- >
+    <main>
+        <section class="signup-section">
+            <h2>cadastro de voluntarios</h2>
+        </div class="sucess-message" id="sucess=message">
+            okay, cadastro realizado com sucesso! em breve entraremos em contato.
+        </div>
+          <form id="volunteer-form" onsubmit="handlesubmit(event)">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="form-group">
+                    <label for="name">Nome Completo: *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone: *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Idade: *</label>
+                    <input type="number" id="age" name="age" required min="18" max="100" required>
+                </div>
+            <fieldset>       
+
+            </fieldset>
+            <legend>Disponibilidade</legend>
+                <div class="form-group">
+                    <label for="availability">Dias Disponiveis: *</label>
+                    <select id="availability" name="availability" required>
+                        <option value="">Selecione</option>
+                        <option value="weekdays">Dias de Semana</option>
+                        <option value="weekends">Finais de Semana</option>
+                        <option value="both">Ambos</option>
+                        <option value="occasional">Ocasionalmente</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=""interests">Areas de Interesse: *</label>
+                    <select id="interests" name="interests" required>
+                        <option value="">Selecione</option>
+                        <option value="animal-care">Cuidado com Animais</option>
+                        <option value="event-planning">Organização de Eventos</option>
+                        <option value="fundraising">Captação de Recursos</option>
+                        <option value="administration">Administração</option>
+                        <option value="marketing">Marketing e Comunicação</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+                <div class="form-group">
+                    <label for="experience">Experiência Anterior como Voluntario:</label>
+                    <textarea id="experience" name="experience" placeholder="conte-nos sobre sua Experiência..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="motivation">Motivação para ser Voluntario: *</label>
+                    <textarea id="motivation" name="motivation" required placeholder="compartilhe sua motivação..."></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn-submit">Enviar Cadastro</button>
+          </form>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 ONG Thunder. Todos os direitos reservados.</p>
+        <p>feito com &#10084;&#65039; para mudar vidas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+        
